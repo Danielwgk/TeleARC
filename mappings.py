@@ -21,8 +21,8 @@ steering = wheel.axis(0) + steer_trim * 0.5
 throttle_trim = wheel.hat_switch(hat=0, axis=1, positions=41, initial=20)
 throttle = (-+wheel.axis(2) + 1.0) * -wheel.button(22)
 shifter = +wheel.button(12) + -(+wheel.button(13)) + +wheel.button(22)
-front_diff = wheel.button(9)
-rear_diff = wheel.button(10)
+front_diff = wheel.toggle(9)
+rear_diff = wheel.toggle(10)
 
 # Output (PPM) channels.
 CHANNELS = (

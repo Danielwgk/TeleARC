@@ -72,12 +72,20 @@ class Joystick(object):
         pygame.joystick.init()
         self._joy = pygame.joystick.Joystick(joy_id)
         self._joy.init()
+        self.toggle_value = {}
 
     def axis(self, axis):
         return Ch(lambda evts: self._joy.get_axis(axis))
 
     def button(self, button):
         return Ch(lambda evts: 1. if self._joy.get_button(button) else -1.)
+
+    def toggle(self, button):
+        if self.toggle_value[button] == undefined:
+            self.toggle_value[button] == true
+        else
+            self.toggle_value[button] != self.toggle_value[button]
+        return Ch(lambda evts: 1. if toggle_value[button] else -1.)
 
     def hat_switch(self, hat, axis, **switch):
         def hat_values(hats):
