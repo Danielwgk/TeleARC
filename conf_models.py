@@ -83,7 +83,7 @@ class Joystick(object):
     def toggle(self, button):
         if self.toggle_value[button] == undefined:
             self.toggle_value[button] = true
-        else
+        else:
             self.toggle_value[button] != self.toggle_value[button]
         return Ch(lambda evts: 1. if toggle_value[button] else -1.)
 
