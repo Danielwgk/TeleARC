@@ -83,7 +83,7 @@ class Joystick(object):
     def toggle(self, toggle_button):
         if toggle_button in self.toggle_value and self._joy.get_button(toggle_button):
             self.toggle_value[toggle_button] = not self.toggle_value[toggle_button]
-        else
+        else:
             self.toggle_value[toggle_button] = True
         return Ch(lambda evts: 1. if self.toggle_value[toggle_button] else -1.)
 
