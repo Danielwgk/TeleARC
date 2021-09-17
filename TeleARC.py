@@ -97,7 +97,7 @@ def main():
         # very sophisticated. (At this point, at least.)
         time.sleep(.02)
 		
-	#print(_output)
+	print(_output)
 
     if pi:
         pi.stop()
