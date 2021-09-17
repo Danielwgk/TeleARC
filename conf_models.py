@@ -84,7 +84,7 @@ class Joystick(object):
         if self.toggle_value.get(toggle_button) == None:
             self.toggle_value[toggle_button] = True
         elif self._joy.get_button(toggle_button):
-            self.toggle_value[toggle_button] not self.toggle_value[toggle_button]
+            self.toggle_value[toggle_button] = not self.toggle_value[toggle_button]
         return Ch(lambda evts: 1. if self.toggle_value.get(toggle_button) else -1.)
 
     def hat_switch(self, hat, axis, **switch):
