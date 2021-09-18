@@ -84,8 +84,8 @@ class Joystick(object):
         def toggle_values(buttons):
             for evt in buttons:
                 if evt.joy == self._joy.get_id() \
-                    and evt.toggle_button == toggle_button:
-                     yield evt.value[button]
+                   and evt.toggle_button == toggle_button:
+                    yield evt.value[button]
         return Ch(Switch(evt_map=lambda (buttons): toggle_values(buttons),
                          **switch))
 
