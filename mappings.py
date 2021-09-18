@@ -1,7 +1,7 @@
 from conf_models import *
 
 wheel = Joystick(0)
-toggle = Switch(wheel.button(9) , positions = 2 , initial=1)
+toggle = Switch(lambda togbutt: wheel.button(9) , positions = 2 , initial=1)
 PPM_OUTPUT_PIN = 4
 
 """
