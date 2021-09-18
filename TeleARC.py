@@ -51,7 +51,7 @@ def main():
 
     while _running:
         # clicks for advanced mapping
-        clicks, hats = [], [], []
+        clicks, hats = [], []
         for evt in pygame.event.get():
             if evt.type == pygame.JOYBUTTONDOWN:
                 #print "JOYBUTTONDOWN: %r\n%s" % (evt, dir(evt))
