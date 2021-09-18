@@ -54,7 +54,7 @@ def main():
         clicks, hats = [], []
         for evt in pygame.event.get():
             if evt.type == pygame.JOYBUTTONDOWN:
-                #print "JOYBUTTONDOWN: %r\n%s" % (evt, dir(evt))
+                print "JOYBUTTONDOWN: %r\n%s" % (evt, dir(evt))
                 clicks.append(evt)
             elif evt.type == pygame.JOYHATMOTION and any(evt.value):
                 #print "JOYHATMOTION: %r\n%s" % (evt, dir(evt))
