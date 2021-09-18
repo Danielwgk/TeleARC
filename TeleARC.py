@@ -54,11 +54,11 @@ def main():
         clicks, hats, buttons = [], [], []
         for evt in pygame.event.get():
             if evt.type == pygame.JOYBUTTONDOWN:
-                print "JOYBUTTONDOWN: %r\n%s" % (evt, dir(evt))
+                #print "JOYBUTTONDOWN: %r\n%s" % (evt, dir(evt))
                 clicks.append(evt)
                 buttons.append(evt)
             elif evt.type == pygame.JOYHATMOTION and any(evt.value):
-                print "JOYHATMOTION: %r\n%s" % (evt, dir(evt))
+                #print "JOYHATMOTION: %r\n%s" % (evt, dir(evt))
                 hats.append(evt)
 
         # tuple to enforce immutability "CHANNELS(1,2,3,4,5,6..)"
@@ -98,7 +98,7 @@ def main():
         # very sophisticated. (At this point, at least.)
         time.sleep(.02)
 		
-	#print(_output)
+	print(_output)
 
     if pi:
         pi.stop()
