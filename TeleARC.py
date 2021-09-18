@@ -51,18 +51,17 @@ def main():
 
     while _running:
         # clicks for advanced mapping
-        clicks, hats, buttons = [], [], []
+        clicks, hats = [], [], []
         for evt in pygame.event.get():
             if evt.type == pygame.JOYBUTTONDOWN:
                 #print "JOYBUTTONDOWN: %r\n%s" % (evt, dir(evt))
                 clicks.append(evt)
-                buttons.append(evt)
             elif evt.type == pygame.JOYHATMOTION and any(evt.value):
                 #print "JOYHATMOTION: %r\n%s" % (evt, dir(evt))
                 hats.append(evt)
 
         # tuple to enforce immutability "CHANNELS(1,2,3,4,5,6..)"
-        _output = tuple(max(min(ch((clicks, hats, buttons)), 1.), -1.)
+        _output = tuple(max(min(ch((clicks, hats)), 1.), -1.)
                         for ch in CHANNELS)
 
         if _output == prev:
