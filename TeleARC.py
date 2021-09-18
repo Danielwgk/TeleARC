@@ -62,7 +62,7 @@ def main():
                 hats.append(evt)
 
         # tuple to enforce immutability "CHANNELS(1,2,3,4,5,6..)"
-        _output = tuple(max(min(ch((clicks, hats)), 1.), -1.)
+        _output = tuple(max(min(ch((clicks, hats, buttons)), 1.), -1.)
                         for ch in CHANNELS)
 
         if _output == prev:
