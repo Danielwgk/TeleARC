@@ -81,7 +81,7 @@ class Joystick(object):
         return Ch(lambda evts: 1. if self._joy.get_button(button) else -1.)
 
     def toggle(self, toggle_button):
-        print("1 before: " + self.toggle_value[toggle_button]) # Expect True/False
+        #print("1 before: " + self.toggle_value[toggle_button]) # Expect True/False
         if toggle_button in self.toggle_value and self._joy.get_button(toggle_button):
             self.toggle_value[toggle_button] = not self.toggle_value[toggle_button]
             print("1 after: " + self.toggle_value[toggle_button]) # Expect the opposite of ^
