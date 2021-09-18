@@ -85,11 +85,11 @@ class Joystick(object):
         if toggle_button in self.toggle_value and self._joy.get_button(toggle_button):
             self.toggle_value[toggle_button] = not self.toggle_value[toggle_button]
             toggleprint2 = str(self.toggle_value[toggle_button])
-			print("1 after: " + toggleprint2) # Expect the opposite of ^
+            print("1 after: " + toggleprint2) # Expect the opposite of ^
         else:
             #print("2 before: " + self.toggle_value[toggle_button]) # Expect Null? Or will Python shit itself here?
             self.toggle_value[toggle_button] = True
-			toggleprint = str(self.toggle_value[toggle_button])
+            toggleprint = str(self.toggle_value[toggle_button])
             print("2 after: " + toggleprint) # Expect True
         return Ch(lambda evts: 1. if self.toggle_value[toggle_button] else -1.)
 
